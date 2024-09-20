@@ -1,0 +1,10 @@
+.packageActivateButton {
+	background-color: #1e90ff;
+	padding: 15px;
+	color: white;
+	font-family: 'poppins-regular';
+}
+.packageActivateButton:hover {
+	background-color: #062a78;
+	cursor: pointer;
+}

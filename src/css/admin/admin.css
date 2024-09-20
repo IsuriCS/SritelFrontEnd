@@ -1,0 +1,168 @@
+/* .admin-styled-table {
+	width: 80%;
+	height: 100%;
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	min-width: 400px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+} */
+.adminPackagesBottomRow{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+}
+.admin-styled-table tbody {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	height: 600px;
+}
+.admin-styled-table thead tr {
+	display: block;
+    background-color: #009879;
+	color: #ffffff;
+	text-align: left;
+}
+.admin-styled-table th,
+.admin-styled-table td {
+	padding: 5px 10px;
+	width: 200px;
+}
+.admin-styled-table tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+.admin-styled-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+.admin-styled-table tbody tr:last-of-type {
+	border-bottom: 2px solid #009879;
+}
+.adminPackageAddButton {
+	width: 10%;
+	height: 80%;
+	background-color: dodgerblue;
+	border-radius: 3em;
+    font-family: poppins-regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adminPackageAddButton:hover {
+	background-color: royalblue;
+    cursor: pointer;
+}
+.packageDescriptionInput{
+    position: relative;
+	border: 0;
+	/* outline: 2px solid #7eb693; */
+	width: 95%;
+	padding: 10px;
+	font-style: normal;
+	background-color: white;
+	border-radius: 1em;
+	line-height: 42px;
+	font-size: 20px;
+    outline: 3px solid #2b519a;
+}
+.adminPackageInput {
+	position: relative;
+	border: 0;
+	/* outline: 2px solid #7eb693; */
+	width: 95%;
+	padding: 10px;
+	margin-top: 5%;
+	font-style: normal;
+	background-color: white;
+	border-radius: 1em;
+	line-height: 42px;
+	font-size: 20px;
+    outline: 3px solid #2b519a;
+}
+.adminPackagePlaceholder {
+	position: relative;
+	pointer-events: none;
+	transition: all 0.5s ease;
+	color: #2b519a;
+	left: 3%;
+	top: -38%;
+	font-family: poppins-regular;
+	background-color: transparent;
+}
+.adminPackagerow input:focus,
+.adminPackagerow input:valid {
+	border-bottom: 3px solid var(--signInTheme) !important;
+	transition: all 0.7s ease;
+}
+.adminPackagerow input:focus + .adminPackagePlaceholder,
+.adminPackagerow input:not(:focus):valid + .adminPackagePlaceholder {
+	top: -70%;
+	left: 0%;
+	background-color: transparent;
+	color: red;
+}
+.adminPackagerow {
+	width: 90%;
+	height: 15%;
+	margin-bottom: 2%;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #2b519a;
+  font-family: poppins-regular;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #2b519a;
+  font-family: poppins-regular;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #2b519a;
+  font-family: poppins-regular;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #2b519a;
+  font-family: poppins-regular;
+}
+.addNewPackageTitle{
+    font-family: poppins-bold;
+}
+/* th {
+	background: #abdd93;
+} */
+/* .admin-styled-table thead tr {
+	background-color: #009879;
+	color: #ffffff;
+	text-align: left;
+}
+.admin-styled-table th,
+.admin-styled-table td {
+	padding: 12px 15px;
+}
+.admin-styled-table tbody {
+    height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.admin-styled-table tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+.admin-styled-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+.admin-styled-table tbody tr:last-of-type {
+	border-bottom: 2px solid #009879;
+}
+.admin-styled-table tbody tr.active-row {
+	font-weight: bold;
+	color: #009879;
+}
+.adminPackageAddButton {
+	width: 10%;
+	height: 80%;
+	background-color: dodgerblue;
+	border-radius: 3em;
+}
+.adminPackageAddButton:hover {
+	background-color: royalblue;
+} */
