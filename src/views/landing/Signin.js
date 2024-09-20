@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import '../../css/signin.css';
+import Signinimg from '../../assets/images/login.png';
+import Logoimg from '../../assets/images/logo.png';
+
 import Toast from '../../componets/Toast';
 import * as ToastMessages from '../../componets/ToastMessages';
 import { Axios_user } from '../../api/Axios';
@@ -67,10 +70,18 @@ export default function Signin() {
 		}
 	};
 	return (
-		<div className='signInOuterContainer'>
-			<div className='Title'>Sritel Communications</div>
-			<div className='loginPhone'></div>
-			<div className='signInInnerContainer'>
+		<div className='signInOuterContainer bg-blue-600'>
+			<div>
+				
+				<img src={Logoimg} className='absolute top-[4%] left-[2%] h-[120px]'></img>
+				<div className='Title '>Sritel</div>
+				<div className=' absolute top-[20%] left-[6%] text-3xl text-white pt-5'>Login</div>
+			</div>
+			
+			<div className='loginPhone '>
+				<img src={Signinimg} className='h-2/4 mt-32 ml-16'></img>
+			</div>
+			<div className='signInInnerContainer pt-10'>
 				<div className='formFields'>
 					<div className='signinrow'>
 						<input className='signInInput' type='text' onChange={(event) => setEmail(event.target.value)} value={email} required></input>
@@ -81,14 +92,14 @@ export default function Signin() {
 						<label className='signInPlaceholder'>Password*</label>
 					</div>
 					{IsDisabled ? (
-						<div className='submitButton'>Sign In</div>
+						<div className='submitButton'>Log In</div>
 					) : (
 						<div className='submitButton' onClick={handleSubmit}>
-							Sign In
+							Log In
 						</div>
 					)}
 
-					<div style={{display: 'flex', flexDirection: 'row'}}>
+					<div style={{display: 'flex', flexDirection: 'row'}} className='pt-3'>
 						<span className='notregisteredtext'>Not registered?</span>
 						<span className='signInText' style={{textDecoration: 'underline', color: 'white'}} onClick={() => navigate('/signup')}>
 							Sign up

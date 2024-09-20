@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import '../../css/signup.css';
+import Signinimg from '../../assets/images/signup.png';
+import Logoimg from '../../assets/images/logo.png';
+
 import Toast from '../../componets/Toast';
 import * as ToastMessages from '../../componets/ToastMessages';
 import {Axios_user} from '../../api/Axios';
@@ -99,37 +102,91 @@ export default function Signin() {
 		}
 	};
 	return (
-		<div className='outerContainer'>
-			<div className='innerContainer'>
+		<div className='signInOuterContainer bg-blue-600'>
+			<div>
+				
+				<img src={Logoimg} className='absolute top-[4%] left-[2%] h-[120px]'></img>
+				<div className='Title '>Sritel</div>
+				<div className=' absolute top-[20%] left-[6%] text-3xl text-white pt-5'>Sign Up</div>
+			</div>
+			
+			<div className='loginPhone '>
+				<img src={Signinimg} className='h-2/4 mt-32 ml-16'></img>
+			</div>
+			<div className='outerContainer'>
+				
+				<div className='innerContainer mt-[170px] ml-[68px]'>
+					<div className='formFields'>
+						<div className='signUpRow'>
+							<input className='signUpInput' type='text' onChange={(event) => setEmail(event.target.value)} value={email} required></input>
+							<label className='placeholder'>User name*</label>
+						</div>
+						<div className='signUpRow'>
+							<input className='signUpInput' type='password' onChange={(event) => setPassword(event.target.value)} value={password} required></input>
+							<label className='placeholder'>Password*</label>
+						</div>
+						<div className='signUpRow'>
+							<input className='signUpInput' type='password' onChange={(event) => setConfirmPassword(event.target.value)} value={confirmpassword} required></input>
+							<label className='placeholder'>Confirm password*</label>
+						</div>
+						{IsDisabled ? (
+							<div className='submitButton'>Sign up</div>
+						) : (
+							<div className='submitButton' onClick={handleSubmit}>
+								Sign up
+							</div>
+						)}
+						<div style={{ display: 'flex', flexDirection: 'row' }} className='pt-3'>
+							<span>Already registered?</span>
+							<span className='signInText ' style={{ textDecoration: 'underline', color: 'dodgerblue' }} onClick={() => navigate('/')}>
+								Sign in
+							</span>
+						</div>
+					</div>
+				</div>
+				<Toast duration={3000} />
+			</div>
+			{/* <div className='aboutus' style={{width: '40%'}}>
+				<div className='Title' style={{width: '80%'}}>
+					About us
+				</div>
+				<div className='content'>
+					<Typewriter
+						onInit={(typewriter) => {
+							typewriter.typeString('GeeksForGeeks').pauseFor(1000).deleteAll().typeString('Welcomes You').start();
+						}}
+					/>
+				</div>
+			</div> */}
+
+			{/* <div className='signInInnerContainer'>
 				<div className='formFields'>
-					<div className='signUpRow'>
-						<input className='signUpInput' type='text' onChange={(event) => setEmail(event.target.value)} value={email} required></input>
-						<label className='placeholder'>User name*</label>
+					<div className='signinrow'>
+						<input className='signInInput' type='text' onChange={(event) => setEmail(event.target.value)} value={email} required></input>
+						<label className='signInPlaceholder'>User name*</label>
 					</div>
-					<div className='signUpRow'>
-						<input className='signUpInput' type='password' onChange={(event) => setPassword(event.target.value)} value={password} required></input>
-						<label className='placeholder'>Password*</label>
-					</div>
-					<div className='signUpRow'>
-						<input className='signUpInput' type='password' onChange={(event) => setConfirmPassword(event.target.value)} value={confirmpassword} required></input>
-						<label className='placeholder'>Confirm password*</label>
+					<div className='signinrow'>
+						<input className='signInInput' type='password' onChange={(event) => setPassword(event.target.value)} value={password} required></input>
+						<label className='signInPlaceholder'>Password*</label>
 					</div>
 					{IsDisabled ? (
-						<div className='submitButton'>Sign up</div>
+						<div className='submitButton'>Sign In</div>
 					) : (
 						<div className='submitButton' onClick={handleSubmit}>
-							Sign up
+							Sign In
 						</div>
 					)}
+
 					<div style={{display: 'flex', flexDirection: 'row'}}>
-						<span>Already registered?</span>
-						<span className='signInText' style={{textDecoration: 'underline', color: 'dodgerblue'}} onClick={() => navigate('/')}>
-							Sign in
+						<span>Not registered?</span>
+						<span className='signInText' style={{textDecoration: 'underline', color: 'dodgerblue'}} onClick={() => navigate('/signup')}>
+							Sign up
 						</span>
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<Toast duration={3000} />
 		</div>
+		
 	);
 }
