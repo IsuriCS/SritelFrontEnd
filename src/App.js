@@ -9,21 +9,21 @@ import Sidebar from './componets/Sidebar';
 import ProtectedRoutes from './utils/ProtectedRoutes';
 import { useSelector, useDispatch } from 'react-redux';
 
-import Cd from "./views/customer/CustomerDashboard";
+// import Cd from "./views/customer/CustomerDashboard";
 
 function App() {
-	// const navigate = useNavigate();
-	// //localStorage.clear('type');
+	const navigate = useNavigate();
+	localStorage.clear('type');
 	var user = localStorage.getItem('type');
-	// console.log(user);
-	// useEffect(() => {
-	// 	if (user) {
-	// 		navigate('/home');
-	// 	} else {
-	// 		navigate('');
-	// 	}
-	// }, [user]);
-	// console.log(useSelector((state) => state.UserReducer.user));
+	console.log(user);
+	useEffect(() => {
+		if (user) {
+			navigate('/home');
+		} else {
+			navigate('');
+		}
+	}, [user]);
+	console.log(useSelector((state) => state.UserReducer.user));
 	return (
 		<div className='appContainer'>
 			<div className='sidebar'>
@@ -34,7 +34,7 @@ function App() {
 					<Route path='/' element={<Signin />}></Route>
 					<Route path='/signup' element={<Signup />}></Route>
 					<Route path='/otp' element={<Otp />}></Route>
-					<Route path='/cd'element={<Cd/>}></Route>
+					{/* <Route path='/cd'element={<Cd/>}></Route> */}
 					<Route element={<ProtectedRoutes isSignedIn={user} />}>{user == 'Customer' ? UserRoutes.customerRoutes.map((item) => <Route key={item.id} path={item.path} element={item.element}></Route>) : user == 'Admin' ? UserRoutes.adminRoutes.map((item) => <Route key={item.id} path={item.path} element={item.element}></Route>) : user == 'Staff' ? UserRoutes.staffRoutes.map((item) => <Route key={item.id} path={item.path} element={item.element}></Route>) : <Route />}</Route>
 				</Routes>
 			</div>

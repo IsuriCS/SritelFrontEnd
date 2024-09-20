@@ -6,16 +6,16 @@
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	background-color: #edf6f9;
+	/* background-color: #edf6f9; */
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .outerContainer .innerContainer {
 	display: flex;
 	flex-direction: column;
 	width: 30vw;
 	height: 30vw;
-	background-color: white;
+	/* background-color: white; */
 	border-radius: 35px;
 }
 .innerContainer .formFields {
@@ -66,10 +66,11 @@
 	position: relative;
 	pointer-events: none;
 	transition: all 0.5s ease;
-	color: #4d5959;
+	color: #2b519a;
 	left: 3%;
 	top: -37%;
 	font-family: poppins-regular;
+	background-color: transparent;
 }
 .signUpRow input:focus,
 .signUpRow input:valid {
@@ -78,9 +79,10 @@
 }
 .signUpRow input:focus + .placeholder,
 .signUpRow input:not(:focus):valid + .placeholder {
-	top: -80%;
+	top: -77%;
 	left: 0%;
-	background-color: white;
+	background-color: transparent;
+	color: white;
 }
 .signInText:hover {
 	cursor: pointer;
