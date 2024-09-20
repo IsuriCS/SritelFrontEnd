@@ -1,0 +1,67 @@
+/* App.css */
+
+.chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-header h4 {
+    margin: 0;
+  }
+  
+  .chat-window {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    
+    flex-direction: column;
+  }
+  
+  .message-list {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .message {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .chat-input {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .chat-input button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .chat-input button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

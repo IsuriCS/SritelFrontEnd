@@ -1,0 +1,63 @@
+:root {
+	--bg: #fff;
+	--signInTheme: #fff;
+}
+.otpContainer {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background-color: #edf6f9;
+	align-items: center;
+	justify-content: center;
+}
+.otpContainer .innerContainer {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	height: 30vw;
+	background-color: white;
+	border-radius: 35px;
+	align-items: center;
+}
+.otpContainer .innerContainer .titleText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 40%;
+}
+.otpContainer .innerContainer .signinrow {
+	width: 100%;
+	height: 20%;
+	margin-bottom: 2%;
+}
+.otpContainer .innerContainer .submitButton {
+	width: 50%;
+	height: 12%;
+	background-color: dodgerblue;
+	margin-top: 5%;
+	border-radius: 4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: poppins-regular;
+	font-size: x-large;
+	color: white;
+}
+.otpContainer .innerContainer .submitButton:hover {
+	background-color: royalblue;
+	cursor: pointer;
+	transition: 0.2s ease-in;
+}
+.otpContainer .innerContainer .signinrow > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.otptextBefore {
+	font-family: poppins-medium;
+}
+.otpemail {
+	font-family: poppins-semibold;
+	color: #4d5959;
+}

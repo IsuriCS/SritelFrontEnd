@@ -1,0 +1,139 @@
+:root {
+	--bg: #fff;
+	--signInTheme: #fff;
+}
+body {
+	overflow: hidden;
+}
+.signInOuterContainer {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background-color: #2b519a;
+	align-items: center;
+	justify-content: center;
+}
+.loginPhone {
+	position: absolute;
+	left: 76%;
+	top: 1%;
+	width: 70%;
+	height: 90%;
+	background-color: white;
+	transform: rotate(-30deg);
+	border-radius: 8em;
+	scale: 1.7;
+}
+.Title {
+	font-family: poppins-regular;
+	position: absolute;
+	left: 2%;
+	top: 3%;
+	font-size: 3em;
+	color: white;
+}
+.signInOuterContainer .signInInnerContainer {
+	position: absolute;
+	left: 5%;
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	height: 30vw;
+	background-color: transparent;
+	border-radius: 35px;
+}
+.signInInnerContainer .formFields {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.formFields .signinrow {
+	width: 90%;
+	height: 20%;
+	margin-bottom: 2%;
+}
+.signInInnerContainer .submitButton {
+	width: 90%;
+	height: 16%;
+	background-color: dodgerblue;
+	margin-top: 5%;
+	border-radius: 4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: poppins-regular;
+	font-size: xx-large;
+	color: white;
+}
+.signInInnerContainer .submitButton:hover {
+	background-color: royalblue;
+	cursor: pointer;
+	transition: 0.2s ease-in;
+}
+.signInInput {
+	position: relative;
+	border: 0;
+	/* outline: 2px solid #7eb693; */
+	width: 95%;
+	padding: 10px;
+	margin-top: 5%;
+	font-style: normal;
+	background-color: white;
+	border-radius: 1em;
+	line-height: 42px;
+	font-size: 20px;
+}
+.signInPlaceholder {
+	position: relative;
+	pointer-events: none;
+	transition: all 0.5s ease;
+	color: #2b519a;
+	left: 3%;
+	top: -47%;
+	font-family: poppins-regular;
+	background-color: transparent;
+}
+.signinrow input:focus,
+.signinrow input:valid {
+	border-bottom: 3px solid var(--signInTheme) !important;
+	transition: all 0.7s ease;
+}
+.signinrow input:focus + .signInPlaceholder,
+.signinrow input:not(:focus):valid + .signInPlaceholder {
+	top: -97%;
+	left: 0%;
+	background-color: transparent;
+	color: white;
+}
+.signInText:hover {
+	cursor: pointer;
+}
+.notregisteredtext {
+	color: white;
+	font-family: poppins-regular;
+}
+.aboutus {
+	position: absolute;
+	top:25%;
+	left:70%;
+	width: 40%;
+}
+.aboutus .Title{
+	color: #2b519a;
+}
+.aboutus .content{
+
+	position: absolute;
+	font-family: sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background: transparent;
+}
