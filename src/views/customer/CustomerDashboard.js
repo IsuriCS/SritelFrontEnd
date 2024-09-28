@@ -67,7 +67,7 @@ export default function CustomerDashboard() {
 			user: userid,
 			id: id,
 		}).then((response_2) => {
-			Axios_bill.post(API_ENDPOINTS.ADD_TO_BILL, {
+			Axios_packages.post(API_ENDPOINTS.ADD_TO_BILL, {
 				user: userid,
 				amount: price,
 			}).then((response) => {
