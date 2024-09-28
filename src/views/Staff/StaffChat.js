@@ -24,17 +24,17 @@ export default function StaffChat() {
                   background: "#fff",
                   borderRadius: "20px",
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: "space-between",
                   alignItems: "center",
               }}
           >
               <input
-                  placeholder="Massage"
+                  placeholder="Message"
                   type="text"
                   style={{
-                      // marginRight: "10%",
+                      marginRight: "10%",
                       marginLeft: "5%",
-                      width: "10%",
+                      width: "50%",
                       height: "60%",
                       fontSize: "24px",
                   }}
@@ -43,10 +43,11 @@ export default function StaffChat() {
                   src={sendImg}
                   alt="Send"
                   style={{
-                      width: "10%",
+                      width: "5%",
                       height: "60%",
-                    fontSize: "24px",
-                      cursor: "pointer"
+                    fontSize: "20px",
+                      cursor: "pointer",
+                      marginRight: "5%"
                   }}
               />
           </div>

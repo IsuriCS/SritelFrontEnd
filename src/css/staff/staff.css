@@ -20,7 +20,7 @@
 }
 .admin-styled-table thead tr {
 	display: block;
-    background-color: #009879;
+    background-color: dodgerblue;
 	color: #ffffff;
 	text-align: left;
 }
@@ -41,15 +41,16 @@
 .adminPackageAddButton {
 	width: 10%;
 	height: 80%;
-	background-color: dodgerblue;
-	border-radius: 3em;
+	color: #ffffff;
+	background-color: rgb(4, 18, 33);
+	border-radius: 6px;
     font-family: poppins-regular;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .adminPackageAddButton:hover {
-	background-color: royalblue;
+	background-color: dodgerblue;
     cursor: pointer;
 }
 .packageDescriptionInput{

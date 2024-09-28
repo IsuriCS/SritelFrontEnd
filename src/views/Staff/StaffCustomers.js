@@ -75,9 +75,12 @@ export default function AdminPackages() {
             >
                 <div
                     className="adminPackageAddButton"
+                    style={{
+                        color: "white",
+                    }}
                     onClick={() => setIsModalVisible(!isModalVisible)}
                 >
-                    Add
+                   +  Add
                 </div>
             </div>
             <Modal
