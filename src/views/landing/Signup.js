@@ -106,7 +106,7 @@ export default function Signin() {
 			<div>
 				
 				<img src={Logoimg} className='absolute top-[4%] left-[2%] h-[120px]'></img>
-				<div className='Title '>Sritel</div>
+				<div className='Title '>SriCare</div>
 				<div className=' absolute top-[20%] left-[6%] text-3xl text-white pt-5'>Sign Up</div>
 			</div>
 			
